@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  font-family: "Roboto";
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
