@@ -1,6 +1,5 @@
 import React from "react";
 import Toolbar from "@material-ui/core/Toolbar";
-import AppBar from "@material-ui/core/AppBar";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Logo from "../logo.png";
@@ -13,10 +12,12 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     diplay: "flex",
     justifyContent: "center",
+    marginBottom: 30,
   },
-  title: {
+  logo: {
     height: 100,
-    width: 250,
+    width: 300,
+    objectFit: "contain",
   },
 }));
 
@@ -25,7 +26,7 @@ const Header = () => {
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
-        <img src={Logo} alt="logo" className={classes.title} />
+        <img src={Logo} alt="logo" className={classes.logo} />
       </Toolbar>
     </React.Fragment>
   );

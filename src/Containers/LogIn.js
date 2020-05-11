@@ -13,7 +13,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Visibility from "@material-ui/icons/Visibility";
 import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
-const LogIn = ({ setChangeScreen }) => {
+const LogIn = ({ setToken }) => {
   const history = useHistory();
   const classes = useStyles();
   const [values, setValues] = useState({
@@ -31,7 +31,7 @@ const LogIn = ({ setChangeScreen }) => {
       if (response.data.token) {
         Cookies.set("token", response.data.token, { expires: 1 / 96 });
         Cookies.set("id", response.data.id, { expires: 1 / 96 });
-        setChangeScreen(2);
+        setToken(response.data.token);
         history.push("/myprotectedpage");
       } else {
         alert(response.data.message);

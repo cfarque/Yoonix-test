@@ -41,7 +41,9 @@ app.post("/signup", async function (req, res) {
         },
       });
       await newUser.save();
-      res.json("Congratulations! Welcome!");
+      res.json({ message: "Your registration is complete" });
+    } else {
+      res.json({ message: "Email already exist" });
     }
   }
 });

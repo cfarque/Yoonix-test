@@ -12,7 +12,7 @@ import Joyce from "../joyce.png";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-const UserPage = ({ setChangeScreen }) => {
+const UserPage = ({ setToken }) => {
   const classes = useStyles();
   const [user, setUser] = useState();
   const [isLoading, setIsLoading] = useState(true);
@@ -65,7 +65,7 @@ const UserPage = ({ setChangeScreen }) => {
                 onClick={() => {
                   Cookies.remove("id");
                   Cookies.remove("token");
-                  setChangeScreen(null);
+                  setToken(null);
                 }}
               >
                 Sign Out
@@ -93,21 +93,28 @@ const useStyles = makeStyles((theme) => ({
   thankContainer: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-around",
+    height: 130,
+    paddingTop: 18,
+    alignItems: "center",
+    fontSize: 22,
+    justifyContent: "center",
   },
   endContainer: {
     marginTop: 10,
     display: "flex",
-    width: 300,
+    width: 350,
     justifyContent: "space-between",
   },
   picture: {
     width: 150,
-    height: 150,
+    height: 180,
+    objectFit: "contain",
   },
   logoEnd: {
-    width: 100,
-    height: 80,
+    paddingTop: 10,
+    width: 200,
+    height: 60,
+    objectFit: "contain",
   },
   container: {
     display: "flex",
@@ -132,7 +139,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "white",
     boxShadow: "1px 0px 18px 5px  rgba(34, 34, 34, 0.2)",
     borderWidth: 1,
-    display: "flex",
     height: 230,
     width: 500,
     "& > *": {

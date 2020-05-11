@@ -10,15 +10,8 @@ import UserPage from "./Containers/UserPage";
 import Header from "./Components/Header";
 
 function App() {
-  let token = null;
   const cookieToken = Cookies.get("token");
-  const [changeScreen, setChangeScreen] = useState(1);
-
-  if (cookieToken) {
-    token = cookieToken;
-  } else {
-    token = null;
-  }
+  const [token, setToken] = useState(cookieToken || null);
 
   return (
     <Router>
@@ -29,11 +22,11 @@ function App() {
         </Route>
         {token && (
           <Route path="/myprotectedpage">
-            <UserPage setChangeScreen={setChangeScreen} />
+            <UserPage setToken={setToken} />
           </Route>
         )}
         <Route path="/">
-          <LogIn setChangeScreen={setChangeScreen} />
+          <LogIn setToken={setToken} />
         </Route>
       </Switch>
     </Router>
