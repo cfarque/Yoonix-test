@@ -189,5 +189,6 @@ const useStyles = makeStyles((theme) => ({
   passwordContain: {
     fontSize: 12,
     color: "lightGrey",
+    marginTop: 3,
   },
 }));

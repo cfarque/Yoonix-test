@@ -56,8 +56,8 @@ const UserPage = ({ setToken }) => {
             <div className={classes.buttonContainer}>
               <div>Bienvenue sur Yoonix ! </div>
               <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                mattis risus eu imperdiet lacinia
+                Nous sommes très content de t'accueillir aujourd'hui et nous
+                espérons que tu te plairas ici.
               </div>
               <Button
                 variant="contained"
@@ -130,12 +130,12 @@ const useStyles = makeStyles((theme) => ({
   },
   root: {
     position: "relative",
-    top: 10,
+    top: 50,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: "15px",
+    borderRadius: "5px",
     backgroundColor: "white",
     boxShadow: "1px 0px 18px 5px  rgba(34, 34, 34, 0.2)",
     borderWidth: 1,
@@ -153,6 +153,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     color: "grey",
     fontSize: 15,
+    paddingTop: 50,
   },
   buttonContainer: {
     width: 300,
@@ -164,6 +165,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 30,
     textAlign: "center",
     lineHeight: 2,
+    paddingBottom: 50,
   },
   userInfo: {
     width: 300,
