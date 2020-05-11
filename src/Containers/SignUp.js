@@ -177,14 +177,13 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    height: 600,
   },
   root: {
-    paddingTop: 10,
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    height: 600,
+    height: 400,
     width: 350,
   },
   passwordContain: {

@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-###`npm install`
+### `npm install`
 Create an .env files 
 And declare two variables : MONGODB_URI (it's the adress of your mongo DataBase) and MYSECRET (it's a random character sequence)
 

@@ -12,7 +12,7 @@ import Header from "./Components/Header";
 function App() {
   const cookieToken = Cookies.get("token");
   const [token, setToken] = useState(cookieToken || null);
-
+  console.log(token);
   return (
     <Router>
       <Header />

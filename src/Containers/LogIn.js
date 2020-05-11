@@ -126,7 +126,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-around",
-    height: 300,
-    width: 250,
+    height: 250,
+    width: 280,
   },
 }));

@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     height: 100,
-    width: 300,
+    width: 140,
     objectFit: "contain",
   },
 }));
